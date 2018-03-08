@@ -1,8 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import { render } from "react-dom";
+import "./index.css";
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// Import Components
+import Main from "./components/Main";
+// import react router deps
+import { BrowserRouter, Route } from "react-router-dom";
+
+const router = (
+  <BrowserRouter>
+    <Main />
+  </BrowserRouter>
+);
+
+render(router, document.getElementById("root"));
