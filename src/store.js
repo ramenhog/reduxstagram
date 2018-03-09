@@ -1,6 +1,6 @@
-import { createStore } from "redux";
+import { createStore, compose } from "redux";
 import createHistory from "history/createBrowserHistory";
-import rootReducer from "./reducers";
+import rootReducer from "./reducers/index";
 
 import comments from "./data/comments";
 import posts from "./data/posts";

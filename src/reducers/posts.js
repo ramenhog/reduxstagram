@@ -6,9 +6,17 @@
 // whether something changes in state is up to us
 
 function posts(state = [], action) {
-  console.log("The post will change");
-  console.log(state, action);
-  return state;
+  switch (action.type) {
+    case "INCREMENT_LIKES":
+      const { postIndex } = action;
+      return [
+        ...state.slice(0, postIndex),
+        { ...state[postIndex], likes: state[postIndex].likes + 1 },
+        ...state.slice(postIndex + 1)
+      ];
+    default:
+      return state;
+  }
 }
 
 export default posts;
