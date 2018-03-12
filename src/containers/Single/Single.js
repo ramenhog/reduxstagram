@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as actionCreators from "./actions.js";
+import * as actions from "../actions/actions";
 import Photo from "../../components/Photo";
 import Comments from "../../components/Comments";
 
