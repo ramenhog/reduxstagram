@@ -8,10 +8,9 @@ import Photo from "../../components/Photo";
 
 class PhotoGrid extends React.Component {
   render() {
-    const { items } = this.props;
     return (
       <div className="photo-grid">
-        {items.map((post, i) => (
+        {this.props.posts.map((post, i) => (
           <Photo {...this.props} key={i} i={i} post={post} />
         ))}
       </div>
@@ -28,10 +27,7 @@ class Posts extends React.Component {
         </h1>
         <Switch>
           <Route path="/" exact render={() => <PhotoGrid {...this.props} />} />
-          <Route
-            path="/view/:photoId"
-            render={props => <PostItem {...this.props} {...props} />}
-          />
+          <Route path="/view/:photoId" component={PostItem} />
         </Switch>
       </div>
     );
@@ -39,10 +35,10 @@ class Posts extends React.Component {
 }
 
 const mapStateToProps = state => {
-  const { posts: { comments, items } } = state;
+  const { posts, comments } = state;
   return {
-    comments,
-    items
+    posts,
+    comments
   };
 };
 

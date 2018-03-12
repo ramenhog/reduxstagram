@@ -7,13 +7,13 @@ class Single extends React.Component {
     const {
       addComment,
       removeComment,
-      items,
+      posts,
       comments,
       match: { params: { photoId } }
     } = this.props;
+    const index = posts.findIndex(post => post.code === photoId);
+    const post = posts.find(post => post.code === photoId);
 
-    const index = items.findIndex(post => post.code === photoId);
-    const post = items.find(post => post.code === photoId);
     const postComments = comments[photoId];
 
     return (
