@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import "./index.css";
 
 // Import Components
-import Main from "./components/Main";
+import App from "./components/App";
 
 // import react router deps
 // https://codeburst.io/react-router-v4-unofficial-migration-guide-5a370b8905a
@@ -18,7 +18,7 @@ import store from "./store";
 const router = (
   <Provider store={store}>
     <BrowserRouter>
-      <Route path="/" component={Main} />
+      <Route path="/" component={App} />
     </BrowserRouter>
   </Provider>
 );

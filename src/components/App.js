@@ -3,7 +3,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import Single from "../containers/Single/Single";
 import Posts from "../containers/Posts/Posts";
 
-class Main extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <div>
@@ -19,4 +19,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default App;
