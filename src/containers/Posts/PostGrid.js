@@ -1,5 +1,8 @@
 import React from "react";
-import Photo from "./Photo";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as actions from "../actions/actions";
+import Photo from "../../components/Photo";
 
 class PhotoGrid extends React.Component {
   render() {
@@ -13,4 +16,4 @@ class PhotoGrid extends React.Component {
   }
 }
 
-export default PhotoGrid;
+export PhotoGrid;

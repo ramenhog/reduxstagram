@@ -1,6 +1,6 @@
 import React from "react";
-import Photo from "./Photo";
-import Comments from "./Comments";
+import Photo from "../../components/Photo";
+import Comments from "../../components/Comments";
 
 class Single extends React.Component {
   render() {
