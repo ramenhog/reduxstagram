@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Link, Switch } from "react-router-dom";
-import Single from "./Single";
-import PhotoGrid from "./PhotoGrid";
+import Single from "../containers/Single/Single";
+import Posts from "../containers/Posts/Posts";
 
 class Main extends React.Component {
   render() {
@@ -11,11 +11,8 @@ class Main extends React.Component {
           <Link to="/">Reduxstagram</Link>
         </h1>
         <Switch>
-          <Route path="/" exact render={() => <PhotoGrid {...this.props} />} />
-          <Route
-            path="/view/:photoId"
-            render={props => <Single {...this.props} {...props} />}
-          />
+          <Route path="/" exact render={() => <Posts {...this.props} />} />
+          <Route path="/view/:photoId" component={Single} />
         </Switch>
       </div>
     );
