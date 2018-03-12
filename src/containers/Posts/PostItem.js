@@ -1,7 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import * as actions from "../actions/actions";
 import Photo from "../../components/Photo";
 import Comments from "../../components/Comments";
 
@@ -33,18 +30,4 @@ class Single extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  const { comments, posts } = state;
-  return {
-    posts,
-    comments
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators(actionCreators, dispatch);
-};
-
-const SingleContainer = connect(mapStateToProps, mapDispatchToProps)(Single);
-
-export default SingleContainer;
+export default Single;
